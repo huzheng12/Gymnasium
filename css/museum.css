@@ -1,9 +1,24 @@
 .poster{
   position: relative;
   min-width: 1200px;
+  width: 100%;
+
 }
 .poster .Museumbanner{
 min-width: 1200px;
+width: 100%;
+opacity: 0;
+
+animation: bgchangesell .5s forwards ;
+}
+
+@keyframes bgchangesell {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity:1;
+  }
 }
 .content{
   width: 1200px;
@@ -12,14 +27,25 @@ min-width: 1200px;
   position: relative;
 }
 .content h1{
-text-align: center;
+  text-align: center;
   font-size: 38px;
   font-family: PingFang-SC-Bold, PingFang-SC;
   font-weight: bold;
   color: #333333;
   margin-top: 100px;
   margin-bottom: 80px;
- 
+  animation: htop 1s forwards ;
+
+}
+@keyframes htop {
+  0% {
+    margin-top: 0px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 100px;
+    opacity: 1;
+  }
 }
 .content .text-box{
 width: 956px;
@@ -38,6 +64,8 @@ border: 1px solid #DDDDDD;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+  animation: bgchangesell .5s forwards ;
+
 }
 
 .list-group-item-primary{
@@ -56,6 +84,11 @@ border: 1px solid #DDDDDD;
   color: #FFFFFF;
   transition: all .3s cubic-bezier(.645,.045,.355,1);
 }
+.list-group-item-action-li-miao{
+  
+    animation: bgchangesell 2s forwards ;
+}
+
 .list-group{
   width: 100%;
 
@@ -63,6 +96,7 @@ border: 1px solid #DDDDDD;
 
 .div321{
   margin-top: 60px;
+  position: relative;
   margin-bottom: 140px;
 }
 
