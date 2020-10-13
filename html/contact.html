@@ -1,11 +1,3 @@
-<!--
- * @Descripttion: 
- * @version: X3版本
- * @Author: 胡征
- * @Date: 2020-10-10 11:36:56
- * @LastEditors: huzheng
- * @LastEditTime: 2020-10-13 09:47:37
--->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,6 +11,7 @@
   integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/museum.css">
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=FDXhtzID1paCEnydtt2oSOsGotd9ALjS"></script>
 
 <body>
   <header>
@@ -60,7 +53,23 @@
       <h1>
         联系我们
       </h1>
+      <div class="div321">
+        <div id="allmap"></div>
+      </div>
 
+      <script>
+        var map = new BMap.Map("allmap");    // 创建Map实例
+        map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+        //添加地图类型控件
+        map.addControl(new BMap.MapTypeControl({
+          mapTypes: [
+            BMAP_NORMAL_MAP,
+            BMAP_HYBRID_MAP
+          ]
+        }));
+        map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+      </script>
     </div>
 
   </main>
