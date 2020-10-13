@@ -172,9 +172,14 @@ footer .navigation a{
   font-size: 12px;
 margin-right: 15px;
 }
+footer .navigation .logo-box{
+margin-bottom: 20px;
+display: inline-block;
+background-color: #fff;
+padding-right: 5px;
+}
 footer .navigation .logo{
 height: 46px;
-margin-bottom: 20px;
 }
 footer .navigation .support{
 margin-top: 15px;
